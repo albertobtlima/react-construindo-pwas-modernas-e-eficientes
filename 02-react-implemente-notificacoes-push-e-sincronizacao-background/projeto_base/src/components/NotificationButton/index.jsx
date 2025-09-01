@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import * as Styled from "./style";
 
 const NotificationButton = ({ action }) => {
