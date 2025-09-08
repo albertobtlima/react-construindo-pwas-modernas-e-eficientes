@@ -1,9 +1,18 @@
+import { Queue } from "workbox-background-sync";
 import { CacheableResponsePlugin } from "workbox-cacheable-response";
 import { clientsClaim } from "workbox-core";
 import { ExpirationPlugin } from "workbox-expiration";
 import { cleanupOutdatedCaches, precacheAndRoute } from "workbox-precaching";
 import { Route, registerRoute } from "workbox-routing";
 import { NetworkFirst, StaleWhileRevalidate } from "workbox-strategies";
+
+const queue = new Queue("testSyncQueue");
+
+self.addEventListener("fetch", (event) => {
+  if (event.request.method !== "POST") {
+    return;
+  }
+});
 
 self.skipWaiting();
 clientsClaim();
