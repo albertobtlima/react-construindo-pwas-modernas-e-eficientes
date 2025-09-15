@@ -6,9 +6,13 @@
 
 **Artigos**: 3
 
+---
+
 Planos de estudo com essa formação:
 
 **React: do zero ao avançado** 7ª formação
+
+---
 
 Lista de Cursos:
 
